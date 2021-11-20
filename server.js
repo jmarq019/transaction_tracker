@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+//connecting to Mongodb Atlas when deployed to Heroku 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/budget",
   {
